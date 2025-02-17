@@ -18,9 +18,20 @@ questions = [
         "message": "Licence:",
         "choices": ["MIT License", "Apache License 2.0", "GNU General Public License (GPL v3)", "JGNU Lesser General Public License (LGPL v3),""Mozilla Public License 2.0 (MPL 2.0)","Creative Commons Licenses (CC0, CC BY, etc.","Unlicense"]
     },
-    {"type": "confirm", "message": "Confirm Licence is correct?"},
+    {"type": "confirm", "message": "Confirm Licence is correct? (y/n)"},
+
+    if result[2] == n:
+          {"type": "list",
+        "message": "Licence:",
+        "choices": ["MIT License", "Apache License 2.0", "GNU General Public License (GPL v3)", "JGNU Lesser General Public License (LGPL v3),""Mozilla Public License 2.0 (MPL 2.0)","Creative Commons Licenses (CC0, CC BY, etc.","Unlicense"]
+        },
+        {"type": "confirm", "message": "Confirm Licence is correct? (y/n)"},
+        else
+         { "message": "Details are complete"},
+
 ]
 
+#create variables to hold input from
 result = prompt(questions)
 project_title = result["title"]
 project_desc = result["desc"]
@@ -30,9 +41,5 @@ usage_ins = result["usage"]
 lic_type = result[1]
 confirm = result[2]
 
+#**Use `Rich`** to enhance the user experience with **colored text and structured output**.
 
-#Prompt for Project Description
-
-#Prompt for Installation Instructions
-
-#Prompt for us
