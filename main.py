@@ -36,13 +36,25 @@ project_title = result["title"]
 #color_print([("red", "yes"), ("", " "), ("blue", "no")])
 
 
+# when we know what choice is made, call one or other function
+
+if (prompt_GUI == 'y'):
+    from GUI_input import GUI_window()
+
+elif(prompt_GUI == 'Y'):
+    from GUI_input import GUI_window()
+
+elif(prompt_GUI == 'Yes'):
+    from GUI_input import GUI_window()
+
+elif(prompt_GUI == 'yes'):
+    from GUI_input import GUI_window()
+
+else:
+        from terminal_input import terminal_questions()
 
 
-
-gui_choice (
-
-)
-
+# what we now need to do is to retrieve the input data from either file.
 
 
 
@@ -54,45 +66,6 @@ gui_choice (
 
 
 
-
-
-questions = [
-    {"type": "input", "message": "Project Title:", "name": "title"},
-    {"type": "input", "message": "Project Description:", "name": "desc"},
-    {"type": "input", "message": "Installation Instructions:", "name": "install"},
-      {"type": "input", "message": "Usage Instructions:", "name": "usage"},
-
-
-
-    {
-        "type": "list",
-        "message": "Licence:",
-        "choices": ["MIT License", "Apache License 2.0", "GNU General Public License (GPL v3)", "JGNU Lesser General Public License (LGPL v3),""Mozilla Public License 2.0 (MPL 2.0)","Creative Commons Licenses (CC0, CC BY, etc.","Unlicense"]
-    },
-    {"type": "confirm", "message": "Confirm Licence is correct? (y/n)"},
-
-       # if "n" in result[2]:
-       # {"type": "list",
-       # "message": "Licence:",
-       # "choices": ["MIT License", "Apache License 2.0", "GNU General Public License (GPL v3)", "JGNU Lesser General Public License (LGPL v3),""Mozilla Public License 2.0 (MPL 2.0)","Creative Commons Licenses (CC0, CC BY, etc.","Unlicense"]
-       # },
-       # {"type": "confirm", "message": "Confirm Licence is correct? (y/n)"},
-       # else
-       # { "message": "Details are complete"},
-
-]
-
-
-
-#create variables to hold input from
-result = prompt(questions)
-project_title = result["title"]
-project_desc = result["desc"]
-install_ins = result["install"]
-usage_ins = result["usage"]
-
-lic_type = result[4]
-confirm = result[5]
 
 fnew_input = str(result)
 
