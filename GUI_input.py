@@ -14,7 +14,8 @@ def GUI_window():
     #input_label.place(column = 1, row = 30)
 
     #this is the text box for the first field
-    input_entry_title = tk.Entry(window, text="titleTK" ,font = ("Arial", 14))input_entry_title.grid(column = 0,row = 2, padx = 20, pady = 10)
+    input_entry_title = tk.Entry(window, text="titleTK" ,font = ("Arial", 14))
+    input_entry_title.grid(column = 0,row = 2, padx = 20, pady = 10)
 
     #this is the input label for the second field
     input_label_desc = tk.Label(window, text="Project Description" ,font = ("Arial", 14)).grid(column = 0,row = 3, padx = 2, pady = 5)
@@ -47,10 +48,10 @@ def GUI_window():
     #print("User entered : " + input_entry.get())
     #return None
 
-    project_title = input_entry_title.get()
-    project_desc = input_entry_desc.get()
-    inst = input_entry_inst.get()
-    usage_ins = input_entry_usage.get()
+        project_title = input_entry_title.get()
+        project_desc = input_entry_desc.get()
+        inst = input_entry_inst.get()
+        usage_ins = input_entry_usage.get()
 
     window.mainloop()
 

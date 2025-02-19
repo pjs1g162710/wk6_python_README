@@ -32,8 +32,6 @@ def terminal_questions():
 
         ]
 
-
-
     #create variables to hold input from
     result = prompt(questions)
     project_title = result["title"]

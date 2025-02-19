@@ -1,10 +1,10 @@
 #install Inquirer
-#remember to pip install InquirerPy
+#pip install InquirerPy
 from InquirerPy import prompt
 from InquirerPy.utils import color_print
 from InquirerPy import inquirer
 
-#remember to install pip install rich
+#pip install rich
 from rich import print as rprint
 from rich.console import Console
 from rich.text import Text
@@ -14,44 +14,39 @@ from tkinter import ttk
 
 #First use inquirerpy to ask the user whether they want to use GUI or terminal inputs
 
+def choose_input():
+    color_print([("class:aaa", "fooboo")], style={"aaa": "#000000"})
+    questions = [
+          {
+        "type": "list",
+        "message": "Would you prefer to use GUI or terminal inputs?",
+        "choices": ["GUI", "Terminal"],
+        "name":"input"
+        },
+        {"type": "confirm", "message": "Confirm?"},
+        ]
 
-prompt_GUI = inquirer.text(askGUI ="Would you prefer to use GUI inputs (y/n)?")
+    result = prompt(questions)
+    print(result)
+    return result
+   
 
-selected = prompt(prompt_GUI)
-selected_output = prompt_GUI["askGUI"]
 
 
-
-result = prompt(questions)
-project_title = result["title"]
-#@prompt.register_kb("alt-b")
-#def _(_):
- #   color_print([("#e5c07b", "Hello"), ("#ffffff", "World")])
-
-#name = prompt.execute()
-#color_print([("class:aaa", "fooboo")], style={"aaa": "#000000"})
-
-# the coloured print function allows creation of coloured output
-#color_print(formatted_text=[("class:aa", "hello "), ("class:bb", "world")], style={"aa": "red", "bb": "blue"})
-#color_print([("red", "yes"), ("", " "), ("blue", "no")])
-
+input_type = questions.choices[1]
+print(input_type)
+confirm = result[2]
+print(confirm)   
 
 # when we know what choice is made, call one or other function
 
-if (prompt_GUI == 'y'):
-    from GUI_input import GUI_window()
+if (input_type == 'GUI'):
+    from GUI_input import GUI_window
 
-elif(prompt_GUI == 'Y'):
-    from GUI_input import GUI_window()
-
-elif(prompt_GUI == 'Yes'):
-    from GUI_input import GUI_window()
-
-elif(prompt_GUI == 'yes'):
-    from GUI_input import GUI_window()
-
+elif(input_type == 'Terminal'):
+    from GUI_input import GUI_window
 else:
-        from terminal_input import terminal_questions()
+    from GUI_input import GUI_window
 
 
 # what we now need to do is to retrieve the input data from either file.
