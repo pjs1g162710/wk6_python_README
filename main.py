@@ -59,14 +59,7 @@ else:
 
 
   
-
-
-
-
-
-
-
-
+##file handling to produce readme file
 fnew_input = str(result)
 
 # create text file of input responses without formatting
