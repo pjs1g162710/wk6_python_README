@@ -15,7 +15,7 @@ from tkinter import ttk
 #First use inquirerpy to ask the user whether they want to use GUI or terminal inputs
 
 def choose_input():
-    color_print([("class:aaa", "fooboo")], style={"aaa": "#000000"})
+    #color_print([("class:aaa", "fooboo")], style={"aaa": "#000000"})
     questions = [
           {
         "type": "list",
@@ -23,18 +23,13 @@ def choose_input():
         "choices": ["GUI", "Terminal"],
         "name":"input"
         },
-        {"type": "confirm", "message": "Confirm?"},
+       # {"type": "confirm", "message": "Confirm?"},
         ]
 
     result = prompt(questions)
     print(result)
     return result
    
-
-
-
-input_type = questions.choices[1]
-print(input_type)
 confirm = result[2]
 print(confirm)   
 

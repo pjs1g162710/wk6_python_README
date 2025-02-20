@@ -1,7 +1,7 @@
 #install Inquirer
 #remember to pip install InquirerPy
 from InquirerPy import prompt
-from InquirerPy.utils import color_print
+#from InquirerPy.utils import color_print
 from InquirerPy import inquirer
 
 
@@ -31,7 +31,7 @@ def terminal_questions():
        # { "message": "Details are complete"},
 
         ]
-
+    return questions
     #create variables to hold input from
     result = prompt(questions)
     project_title = result["title"]
