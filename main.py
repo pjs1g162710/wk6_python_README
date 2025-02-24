@@ -17,46 +17,54 @@ from tkinter import ttk
 def choose_input():
     #color_print([("class:aaa", "fooboo")], style={"aaa": "#000000"})
     questions = [
-          {
-        "type": "list",
+        {"type": "list",
         "message": "Would you prefer to use GUI or terminal inputs?",
         "choices": ["GUI", "Terminal"],
         "name":"input"
         },
-       # {"type": "confirm", "message": "Confirm?"},
-        ]
-
+    
+        {"type": "confirm", "message": "Confirm?"},]
+    
     result = prompt(questions)
     print(result)
     return result
    
-confirm = result[2]
-print(confirm)   
+    confirm = result[2]
+    print(confirm)
+
+    #trying to make it print on console
+ 
 
 # when we know what choice is made, call one or other function
 
-if (input_type == 'GUI'):
-    from GUI_input import GUI_window
+    if choices[1] == 'GUI':
+        from GUI_input import GUI_window
 
-elif(input_type == 'Terminal'):
-    from GUI_input import GUI_window
-else:
-    from GUI_input import GUI_window
+    elif choices[1] == 'Terminal':
+        from GUI_input import GUI_window
+    else:
+        from GUI_input import GUI_window
 
 
 # what we now need to do is to retrieve the input data from either file.
+    console = Console()
+    text = Text(str(result))
+    text.stylize("bold magenta", 0, 6)
+    console.print(text)
 
+    text = Text.assemble(("Hello", "bold magenta"), " World!")
+    console.print(text) 
 
 
   
 ##file handling to produce readme file
-fnew_input = str(result)
+    fnew_input = str(result)
 
 # create text file of input responses without formatting
-fnew = open("README.md", "w")
-fnew.write(fnew_input)
+    fnew = open("README.md", "w")
+    fnew.write(fnew_input)
 
-fnew.close()
+    fnew.close()
 
 
 
@@ -64,13 +72,8 @@ fnew.close()
 
 #**Use `Rich`** to enhance the user experience with **colored text and structured output**.
 #experimenting with Rich syntax
-console = Console()
-text = Text("Hello, World!")
-text.stylize("bold magenta", 0, 6)
-console.print(text)
+   
 
-text = Text.assemble(("Hello", "bold magenta"), " World!")
-console.print(text)
 
 #justify (left, center, right or full)
 #overflow (fold. crop, ellipsis)
