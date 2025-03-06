@@ -15,8 +15,8 @@ def print_text_text():
 def submit_callback():#
     project_title = input_text_title.get(1.0, 100.0)
     project_desc = input_text_desc.get(1.0, 100.0)
-    inst = input_text_inst.get(1.0, 500.0)
-    usage_ins = input_text_usage.get(1.0, 500.0)
+    inst = input_text_inst.get(1.0, 1200.0)
+    usage_ins = input_text_usage.get(1.0, 1200.0)
 
 
 # This prints the inputs given to the console to check they are correct, and saves to file
