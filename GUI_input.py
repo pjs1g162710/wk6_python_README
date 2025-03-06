@@ -1,57 +1,72 @@
-import tkinter as tk
-from tkinter import ttk
+import tkinter
 
-def GUI_window():
+#def GUI_window():
+fred = "a mongoose"
+
+def print_text_text():
+    project_title = input_text_title.get(1.0)
+    project_desc = input_text_desc.get(1.0)
+    inst = input_text_inst.get(1.0)
+    usage_ins = input_text_usage.get(1.0)
+
+    label = tkinter.Label(root, text="")
+    label.pack(pady=10)
+    label.config(text="User entered : " + project_title + " " + project_desc + " " + inst + " " + usage_ins)
+
+#This collects the inputs from the GUI window and designates them as variables
+def submit_callback():#
+    project_title = input_text_title.get(1.0, 100.0)
+    project_desc = input_text_desc.get(1.0, 100.0)
+    inst = input_text_inst.get(1.0, 500.0)
+    usage_ins = input_text_usage.get(1.0, 500.0)
+
+
+# This prints the inputs given to the console to check they are correct
+    print(
+        "User entered :\n " +
+        "\nProject Title: " + project_title +
+        "\nProject Description:  " + project_desc +
+        "\nInstallation Instructions: " + inst +
+        "\nUsage Instructions: " + usage_ins)
+    return project_title + project_desc + inst + usage_ins
+
 
     # Creating tkinter window
-    window = tk.Tk()
-    window.title('Build a README File for Github')
-    window.geometry('500x550')
-  
-
+root = tkinter.Tk()
+root.title("Build a README File for Github")
+root.geometry('500x550')
     #This is the label for the first field
-    input_label_title = tk.Label(window, text="Project Title" ,font = ("Arial", 14)).grid(column = 0,row = 1, padx = 2, pady = 5)
-    #input_label.place(column = 1, row = 30)
+input_label_title = tkinter.Label(root, text="Project Title" ,font = ("Arial", 12)).grid(column = 0,row = 1, padx = 5, pady = 5)
 
-    #this is the text box for the first field
-    input_entry_title = tk.Entry(window, text="titleTK" ,font = ("Arial", 14))
-    input_entry_title.grid(column = 0,row = 2, padx = 20, pady = 10)
+# try doing this as a text box rather than an entry
+input_text_title = tkinter.Text(root, width=55, height=2)
+input_text_title.grid(column=0, row=2, padx = 8, pady = 5)
 
     #this is the input label for the second field
-    input_label_desc = tk.Label(window, text="Project Description" ,font = ("Arial", 14)).grid(column = 0,row = 3, padx = 2, pady = 5)
-    #input_label.place(column = 1, row = 30)
+input_label_desc = tkinter.Label(root,text="Project Description" ,font = ("Arial", 12)).grid(column = 0,row = 3, padx = 2, pady = 5)
 
-    input_entry_desc = tk.Entry(window, text="descTK" ,font = ("Arial", 14))
-    input_entry_desc.grid(column = 0,row = 4, padx = 20, pady = 10)
+    #this is the text box for the second field
+input_text_desc = tkinter.Text(root, width=55, height=2)
+input_text_desc.grid(column=0, row=4, padx = 8, pady = 5)
 
     #this is the input label for the third field
-    input_label_inst = tk.Label(window, text="Installation Instructions" ,font = ("Arial", 14)).grid(column = 0,row = 5, padx = 2, pady = 5)
-    #input_label.place(column = 1, row = 30)
+input_label_inst = tkinter.Label(root,text="Installation Instructions" ,font = ("Arial", 12)).grid(column = 0,row = 5, padx = 2, pady = 5)
 
-    input_entry_inst = tk.Entry(window, text="instTK" ,font = ("Arial", 14))
-    input_entry_inst.grid(column = 0,row = 6, padx = 20, pady = 10)
+    #this is the text box for the third field
+input_text_inst = tkinter.Text(root, width=55, height=6 )
+input_text_inst.grid(column = 0,row = 6, padx = 2, pady = 5)
 
     #this is the input label for the fourth field
-    input_label_usage = tk.Label(window, text="Usage Instructions" ,font = ("Arial", 14)).grid(column = 0,row = 7, padx = 2, pady = 5)
-    #input_label.place(column = 1, row = 30)
+input_label_usage = tkinter.Label(root,text="Usage Instructions" ,font = ("Arial", 12)).grid(column = 0,row = 7, padx = 2, pady = 5)
 
-    input_entry_usage = tk.Entry(window, text="useTK" ,font = ("Arial", 14))
-    input_entry_usage.grid(column = 0,row = 8, padx = 20, pady = 10)
+# this is the text box for the fourth field
+input_text_usage = tkinter.Text(root, width=55, height=6)
+input_text_usage.grid(column = 0,row = 8, padx = 5, pady = 5)
 
+#submit button
+submit_button = tkinter.Button(root, text = "Submit" , activebackground= 'blue', command =submit_callback)
+submit_button.grid(column=0, row=9, padx = 10, pady = 5)
 
+root.mainloop()
 
-    submit_button = tk.Button(window, text = "Submit" , command = lambda: submit_callback(submit_button))
-
-    submit_button.grid(column=5, row=11)
-
-    def submit_callback(submit_button):
-    #print("User entered : " + input_entry.get())
-    #return None
-
-        project_title = input_entry_title.get()
-        project_desc = input_entry_desc.get()
-        inst = input_entry_inst.get()
-        usage_ins = input_entry_usage.get()
-
-    window.mainloop()
 
