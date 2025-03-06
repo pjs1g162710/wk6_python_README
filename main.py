@@ -43,14 +43,13 @@ def choose_input():
     elif choices[1] == 'Terminal':
         from terminal_input import GUI_window
     else:
-        from GUI_input import GUI_window
+        from GUI_input import submit_callback
+    else:
 
 
 # what we now need to do is to retrieve the input data from either file.
-    from GUI_input import project_title
-    from GUI_input import project_desc
-    from GUI_input import inst
-    from GUI_input import usage_ins
+
+
 
     console = Console()
     text = Text(str(result))

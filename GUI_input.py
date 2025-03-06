@@ -56,10 +56,6 @@ def submit_callback():#
     filenew.write(str(contents))
     filenew.close()
 
-
-
-
-
     # Creating tkinter window
 root = tkinter.Tk()
 root.title("Build a README File for Github")
