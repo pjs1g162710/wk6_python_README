@@ -9,8 +9,8 @@ from rich import print as rprint
 from rich.console import Console
 from rich.text import Text
 
-import tkinter as tk
-from tkinter import ttk
+import tkinter
+from tkinter import ttk, messagebox
 
 #First use inquirerpy to ask the user whether they want to use GUI or terminal inputs
 
@@ -38,19 +38,20 @@ def choose_input():
 # when we know what choice is made, call one or other function
 
     if choices[1] == 'GUI':
-
+        from GUI_input import GUI_window
 
     elif choices[1] == 'Terminal':
-        from terminal_input import GUI_window
+            from terminal_input import result
     else:
-        from GUI_input import submit_callback
-    else:
+        messagebox.showinfo(
+        title="Select user input method",
+        message=f"Please select either 'GUI' or 'Terminal'")
 
 
 # what we now need to do is to retrieve the input data from either file.
 
 
-
+def console_print():
     console = Console()
     text = Text(str(result))
     text.stylize("bold magenta", 0, 6)
@@ -60,7 +61,7 @@ def choose_input():
     console.print(text) 
 
 
-  
+def file_handling():
 ##file handling to produce readme file
     fnew_input = str(result)
 
