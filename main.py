@@ -38,15 +38,20 @@ def choose_input():
 # when we know what choice is made, call one or other function
 
     if choices[1] == 'GUI':
-        from GUI_input import GUI_window
+
 
     elif choices[1] == 'Terminal':
-        from GUI_input import GUI_window
+        from terminal_input import GUI_window
     else:
         from GUI_input import GUI_window
 
 
 # what we now need to do is to retrieve the input data from either file.
+    from GUI_input import project_title
+    from GUI_input import project_desc
+    from GUI_input import inst
+    from GUI_input import usage_ins
+
     console = Console()
     text = Text(str(result))
     text.stylize("bold magenta", 0, 6)

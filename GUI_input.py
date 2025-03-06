@@ -1,8 +1,6 @@
 import tkinter
 
 #def GUI_window():
-fred = "a mongoose"
-
 def print_text_text():
     project_title = input_text_title.get(1.0)
     project_desc = input_text_desc.get(1.0)
@@ -21,13 +19,27 @@ def submit_callback():#
     usage_ins = input_text_usage.get(1.0, 500.0)
 
 
-# This prints the inputs given to the console to check they are correct
+# This prints the inputs given to the console to check they are correct, and saves to file
     print(
         "User entered :\n " +
-        "\nProject Title: " + project_title +
+        "Project Title: " + project_title +
         "\nProject Description:  " + project_desc +
         "\nInstallation Instructions: " + inst +
         "\nUsage Instructions: " + usage_ins)
+
+    contents = {"Project Title: " + project_title +
+        "Project Description:  " + project_desc +
+        "Installation Instructions: " + inst +
+        "Usage Instructions: " + usage_ins}
+
+    ##file handling to produce readme file
+        # create text file of input responses without formatting
+    filenew = open("README.md", "w")
+    filenew.write(str(contents))
+
+    filenew.close()
+
+
     return project_title + project_desc + inst + usage_ins
 
 
