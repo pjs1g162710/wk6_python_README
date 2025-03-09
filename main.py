@@ -40,11 +40,10 @@ def recallinput():
     if firstq["input"] == 'GUI':
         import GUI_input
         GUI_input.gui_window()
-
-        
+                
     elif firstq["input"] == 'Terminal':
-            import terminal_input
-            runpy.run_module(terminal_input, init_globals=None, run_name=None, alter_sys=False)
+        import terminal_input
+        terminal_input.terminal_enquiry()    
    
     else:
         messagebox.showinfo(

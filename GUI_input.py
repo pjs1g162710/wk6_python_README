@@ -3,8 +3,6 @@ import rich
 from rich.console import Console
 from tkinter import ttk, messagebox
 
-
-
 def gui_window():
     def print_text_text():
         project_title = input_text_title.get(1.0)
@@ -49,7 +47,7 @@ def gui_window():
             "Licence Information: " + selection +
             "Author Details: " + author
                     }
-
+        print(contents)
         ##file handling to produce readme file
             # create text file of input responses without formatting
         global filenew
@@ -131,5 +129,7 @@ def gui_window():
     submit_button.grid(column=0, row=14, padx = 10, pady = 5)
 
     root.mainloop()
+
+    return contents   
 
 

@@ -46,4 +46,25 @@ def terminal_enquiry():
     global lic_type
     lic_type = result["licence"]
 
+    global contents
+    contents = {"Project Title: " + project_title +
+            "Project Description:  " + project_desc +
+            "Installation Instructions: " + install_ins +
+            "Usage Instructions: " + usage_ins +
+            "Licence Information: " + lic_type +
+            "Author Details: " + authdet}
+    
+        ##file handling to produce readme file
+            # create text file of input responses without formatting
+    global filenew
+    filenew = open("README.md", "w")
+    filenew.write(str(contents))
+    filenew.close()
+
+    color_print(contents)
+
+    return contents, filenew
+   
+
+
 
