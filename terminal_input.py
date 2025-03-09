@@ -21,11 +21,11 @@ questions = [
 if "n" in questions[5]:
 
     confirm = [{"type": "list",
-    "message": "Licence:"},
-    "choices":["MIT License", "Apache License 2.0", "GNU General Public License (GPL v3)","JGNU Lesser General Public License (LGPL v3),""Mozilla Public License 2.0 (MPL 2.0)", "Creative Commons Licenses (CC0, CC BY, etc.", "Unlicense"]}
-    {"type": "confirm", "message": "Confirm Licence is correct? (y/n)"}]
+"message": "Licence:",
+"choices": ["MIT License", "Apache License 2.0", "GNU General Public License (GPL v3)", "JGNU Lesser General Public License (LGPL v3),""Mozilla Public License 2.0 (MPL 2.0)","Creative Commons Licenses (CC0, CC BY, etc.","Unlicense"]},
+{"type": "confirm", "message": "Confirm Licence is correct? (y/n)"}]
 else:
-    [{"message": "Details are complete"}]
+    [{"type":"input","message": "Details are complete"}]
 
 #create variables to hold input from
 result = prompt(questions)
