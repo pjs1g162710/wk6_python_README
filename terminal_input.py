@@ -21,18 +21,29 @@ questions = [
                  "Creative Commons Licenses (CC0, CC BY, etc.",
                  "Unlicense"]},
 {"type": "confirm", "message": "Confirm Licence is correct y/n?", "default": True, "name":"confirm"}]
+global result
 result = prompt(questions)
 
 #works to here
 
 #create variables to hold input from
 
+global project_title
 project_title =result["title"]
+
+global project_desc
 project_desc = result["desc"]
+
+global install_ins
 install_ins = result["install"]
+
+global usage_ins
 usage_ins = result["usage"]
+
+global authdet
 authdet = result["author"]
 
+global lic_type
 lic_type = result["licence"]
-confirmed = result["confirm"]
+
 
