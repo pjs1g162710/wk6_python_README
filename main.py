@@ -14,33 +14,35 @@ from tkinter import ttk, messagebox
 
 #First use inquirerpy to ask the user whether they want to use GUI or terminal inputs
 
-def choose_input():
+#def choose_input():
     #color_print([("class:aaa", "fooboo")], style={"aaa": "#000000"})
-    questions = [
-        {"type": "list",
-        "message": "Would you prefer to use GUI or terminal inputs?",
-        "choices": ["GUI", "Terminal"],
-        "name":"input"
-        },
+questions = [
+{"type": "list",
+"message": "Would you prefer to use GUI or terminal inputs?",
+"choices": ["GUI", "Terminal"],
+"name":"input"},
     
-        {"type": "confirm", "message": "Confirm?"},]
+{"type": "confirm", "message": "Confirm?"},]
     
-    result = prompt(questions)
-    print(result)
-    return result
+result = prompt(questions)
+global firstq
+firstq = result["input"]
+
+console = Console()
+text = Text(str(firstq))
+text.stylize("bold magenta", 0, 6)
+console.print(firstq)
+
+text = Text.assemble(("Hello", "bold magenta"), " World!")
+console.print(text) 
    
-    confirm = result[2]
-    print(confirm)
+ # when we know what choice is made, call one or other function
 
-    #trying to make it print on console
- 
-
-# when we know what choice is made, call one or other function
-
-    if choices[1] == 'GUI':
+def recallinput():
+    if firstq["input"] == 'GUI':
         from GUI_input import GUI_window
 
-    elif choices[1] == 'Terminal':
+    elif firstq["input"] == 'Terminal':
             from terminal_input import result
     else:
         messagebox.showinfo(
@@ -51,22 +53,12 @@ def choose_input():
 # what we now need to do is to retrieve the input data from either file.
 
 
-def console_print():
-    console = Console()
-    text = Text(str(result))
-    text.stylize("bold magenta", 0, 6)
-    console.print(text)
-
-    text = Text.assemble(("Hello", "bold magenta"), " World!")
-    console.print(text) 
-
-
 def file_handling():
 ##file handling to produce readme file
-    fnew_input = str(result)
+    fnew_input = str(firstq)
 
 # create text file of input responses without formatting
-    fnew = open("README.md", "w")
+    fnew = open("README2.md", "w")
     fnew.write(fnew_input)
 
     fnew.close()
