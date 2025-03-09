@@ -28,30 +28,30 @@ result = prompt(questions)
 global firstq
 firstq = result["input"]
 
-console = Console()
-text = Text(str(firstq))
-text.stylize("bold magenta", 0, 6)
-console.print(firstq)
+#console = Console()
+#text = Text.str(firstq)
+#text.stylize("bold magenta", 0, 6)
+#console.print(firstq)
 
-text = Text.assemble(("Hello", "bold magenta"), " World!")
-console.print(text) 
-   
+
  # when we know what choice is made, call one or other function
 
 def recallinput():
     if firstq["input"] == 'GUI':
-        from GUI_input import GUI_window
+        import GUI_input
+        GUI_input.gui_window()
 
+        
     elif firstq["input"] == 'Terminal':
-            from terminal_input import result
+            import terminal_input
+            runpy.run_module(terminal_input, init_globals=None, run_name=None, alter_sys=False)
+   
     else:
         messagebox.showinfo(
         title="Select user input method",
         message=f"Please select either 'GUI' or 'Terminal'")
 
-
 # what we now need to do is to retrieve the input data from either file.
-
 
 def file_handling():
 ##file handling to produce readme file

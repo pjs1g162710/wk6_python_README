@@ -4,6 +4,7 @@ from rich.console import Console
 from tkinter import ttk, messagebox
 
 
+
 def gui_window():
     def print_text_text():
         project_title = input_text_title.get(1.0)
