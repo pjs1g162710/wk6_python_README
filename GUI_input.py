@@ -130,6 +130,8 @@ def gui_window():
 
     root.mainloop()
 
-    return contents   
+    return contents
+
+gui_window()   
 
 

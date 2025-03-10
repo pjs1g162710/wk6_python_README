@@ -2,7 +2,7 @@
 #remember to pip install InquirerPy
 from InquirerPy import prompt
 from InquirerPy.utils import color_print
-from InquirerPy import inquirer
+
 
 def terminal_enquiry():
 
@@ -63,7 +63,9 @@ def terminal_enquiry():
 
     color_print(contents)
 
-    return contents, filenew
+    return contents
+
+terminal_enquiry()
    
 
 
