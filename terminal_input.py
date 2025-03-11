@@ -7,7 +7,7 @@ from InquirerPy.utils import color_print
 def terminal_enquiry():
 
     questions = [
-    {"type": "input", "message": "Project Title:", "name": "title"},
+    {"type": "input", "message": "[bold red]Project Title:[\bold red]", "name": "title"},
     {"type": "input", "message": "Project Description:", "name": "desc"},
     {"type": "input", "message": "Installation Instructions:", "name": "install"},
     {"type": "input", "message": "Usage Instructions:", "name": "usage"},

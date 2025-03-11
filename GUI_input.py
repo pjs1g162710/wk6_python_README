@@ -1,5 +1,5 @@
 import tkinter
-import rich
+import rich.markup
 from rich.console import Console
 from tkinter import ttk, messagebox
 
