@@ -12,36 +12,36 @@ from rich.text import Text
 import tkinter
 from tkinter import ttk, messagebox
 
+
+
+
 #First use inquirerpy to ask the user whether they want to use GUI or terminal inputs
-
-#def choose_input():
-    #color_print([("class:aaa", "fooboo")], style={"aaa": "#000000"})
-questions = [
-{"type": "list",
-"message": "Would you prefer to use GUI or terminal inputs?",
-"choices": ["GUI", "Terminal"],
-"name":"input"},
+def initialq():
+    questions = [
+    {"type": "list",
+    "message": "Would you prefer to use GUI or terminal inputs?",
+    "choices": ["GUI", "Terminal"],
+    "name":"input"},
     
-{"type": "confirm", "message": "Confirm?"},]
+    {"type": "confirm", "message": "Confirm?"},]
+
+    result = prompt(questions)
+    global methodinput
+    methodinput =result["input"]
     
-result = prompt(questions)
-global firstq
-firstq = result["input"]
-
-#console = Console()
-#text = Text.str(firstq)
-#text.stylize("bold magenta", 0, 6)
-#console.print(firstq)
-
+    
+    #global firstq
+    #firstq = result["input"]
+    return methodinput
 
  # when we know what choice is made, call one or other function
 
-def recallinput():
-    if firstq["input"] == 'GUI':
+def recallinput(methodinput):
+    if methodinput == "GUI":
         import GUI_input
         GUI_input.gui_window()
                 
-    elif firstq["input"] == 'Terminal':
+    elif methodinput == "Terminal":
         import terminal_input
         terminal_input.terminal_enquiry()    
    
@@ -62,16 +62,6 @@ def file_handling():
 
     fnew.close()
 
-
-
-
-
-#**Use `Rich`** to enhance the user experience with **colored text and structured output**.
-#experimenting with Rich syntax
-   
-
-
-#justify (left, center, right or full)
-#overflow (fold. crop, ellipsis)
-#no_wrap ()
-#tab size (sets number of char in tab)
+#from this point, call the functions!
+initialq()
+recallinput(methodinput)
