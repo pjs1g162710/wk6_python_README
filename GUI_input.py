@@ -41,13 +41,19 @@ def gui_window():
 
             
         s = f"""
-        \n# **Project Title:**  {project_title}
+        \n## **Project Title:**
+        \n# {project_title}
         \n*** 
-        \n## **Project Description:**  {project_desc}
-        \n## **Installation Instructions:** {inst}
-        \n## **Usage Instructions:** {usage_ins}
-        \n## **Licence Information:** {selection}
-        \n## **Author Details:** {author}
+        \n## **Project Description:**
+        \n {project_desc}
+        \n## **Installation Instructions:**
+        \n {inst}
+        \n## **Usage Instructions:** 
+        \n {usage_ins}
+        \n## **Licence Information:** 
+        \n {selection}
+        \n## **Author Details:**
+         \n {author}
         """
                
         ##file handling to produce readme file

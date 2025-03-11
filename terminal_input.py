@@ -68,14 +68,22 @@ def terminal_enquiry():
     console.rule("[bold red]")    
   
     s = f"""
-    # **Project Title:**  {project_title}
-    *** 
-    ## **Project Description:**  {project_desc}
-    ## **Installation Instructions:** {install_ins}
-    ## **Usage Instructions:** {usage_ins}
-    ## **Licence Information:** {lic_type}
-    ## **Author Details:** {authdet}
+    \n## **Project Title:**
+    \n# {project_title}
+    \n*** 
+    \n## **Project Description:**
+    \n {project_desc}
+    \n## **Installation Instructions:**
+    \n {install_ins}
+    \n## **Usage Instructions:** 
+    \n {usage_ins}
+    \n## **Licence Information:** 
+    \n {lic_type}
+    \n## **Author Details:**
+    \n {authdet}
     """
+
+
     global filenew
     filenew = open("README.md", "w")
     filenew.write(str(s))
