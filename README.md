@@ -1,1 +1,1 @@
-{'Project Title: final check\nProject Description:  describe check\nInstallation Instructions: install somehow\nUsage Instructions: for new projects\nLicence Information: GNU Lesser General Public Licence (LGPL v3)Author Details: Pip8\n'}
+{'Project Title: dasdsa\nProject Description:  scsxc\nInstallation Instructions: xc\nUsage Instructions: xcsc\nLicence Information: GNU Lesser General Public Licence (LGPL v3)Author Details: xAXCV \n'}

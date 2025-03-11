@@ -31,7 +31,7 @@ def gui_window():
     # This prints the inputs given to the console to check they are correct, and saves to file
         console = Console()
         console.print(
-            "[bold green]User entered :[/bold green]\n " +
+            "[bold blue]User entered :[/bold blue]\n " +
             "[bold green]Project Title: [/bold green] " + project_title +
             "\n[bold green]Project Description:  [/bold green]" + project_desc +
             "\n[bold green]Installation Instructions: [/bold green]" + inst +
@@ -47,7 +47,7 @@ def gui_window():
             "Licence Information: " + selection +
             "Author Details: " + author
                     }
-        print(contents)
+        
         ##file handling to produce readme file
             # create text file of input responses without formatting
         global filenew
