@@ -91,7 +91,7 @@ def terminal_enquiry():
 
     return result
 
-terminal_enquiry()
+
    
 
 
