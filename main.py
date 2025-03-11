@@ -42,7 +42,8 @@ def recallinput(methodinput):
                 
     elif methodinput == "Terminal":
         import terminal_input
-        terminal_input.terminal_enquiry()    
+        terminal_input.terminal_enquiry()  
+    
    
     else:
         messagebox.showinfo(
@@ -63,4 +64,4 @@ def file_handling():
 
 #from this point, call the functions!
 initialq()
-recallinput(methodinput)
+recallinput(methodinput) 

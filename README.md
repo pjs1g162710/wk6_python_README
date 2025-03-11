@@ -1,9 +1,21 @@
 
-# **Project Title:**  sdfsdf\
+        
+# **Project Title:**  we dont need no education
+
+        
 *** 
-## **Project Description:**  dsf\d
-## **Installation Instructions:** sdfcdb[pkf[pb
-## **Usage Instructions:** dsfk\d
-## **Licence Information:** Apache License 2.0
-## **Author Details:** dsfspf\
-    
+        
+## **Project Description:**  we dont need no thought control
+
+        
+## **Installation Instructions:** hey teacher ,leave us kids alone
+
+        
+## **Usage Instructions:** all in all its just another brick in the wall
+
+        
+## **Licence Information:** Unlicensed
+        
+## **Author Details:** Pip
+
+        

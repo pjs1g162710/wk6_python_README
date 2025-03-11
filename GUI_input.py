@@ -39,20 +39,22 @@ def gui_window():
             "\n[bold green] Licence Information: [/bold green]" + selection +
             "\n[bold green]Author Details: [/bold green]" + author)
 
-        global contents
-        contents = {"Project Title: " + project_title +
-            "Project Description:  " + project_desc +
-            "Installation Instructions: " + inst +
-            "Usage Instructions: " + usage_ins +
-            "Licence Information: " + selection +
-            "Author Details: " + author
-                    }
-        
+            
+        s = f"""
+        \n# **Project Title:**  {project_title}
+        \n*** 
+        \n## **Project Description:**  {project_desc}
+        \n## **Installation Instructions:** {inst}
+        \n## **Usage Instructions:** {usage_ins}
+        \n## **Licence Information:** {selection}
+        \n## **Author Details:** {author}
+        """
+               
         ##file handling to produce readme file
             # create text file of input responses without formatting
         global filenew
         filenew = open("README.md", "w")
-        filenew.write(str(contents))
+        filenew.write(str(s))
         filenew.close()
 
         # Creating tkinter window
@@ -130,7 +132,7 @@ def gui_window():
 
     root.mainloop()
 
-    return contents
+    
 
 
 
