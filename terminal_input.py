@@ -53,12 +53,12 @@ def terminal_enquiry():
     lic_type = result["licence"]
 
     global contents
-    contents = {"Project Title: " + project_title +
-            "Project Description:  " + project_desc +
-            "Installation Instructions: " + install_ins +
-            "Usage Instructions: " + usage_ins +
-            "Licence Information: " + lic_type +
-            "Author Details: " + authdet}
+    contents = ("Project Title: " + project_title +
+    "Project Description:  " + project_desc +
+    "Installation Instructions: " + install_ins +
+    "Usage Instructions: " + usage_ins +
+    "Licence Information: " + lic_type +
+    "Author Details: " + authdet)
     
         ##file handling to produce readme file
             # create text file of input responses without formatting
@@ -71,7 +71,14 @@ def terminal_enquiry():
     console.print("The following details were provided:", style=style, justify="left", overflow = "fold")
     console.rule("[bold red]")
 
-    print(contents)
+    console.print(
+        "[bold blue]User entered: [/bold blue]\n " +
+        "[bold green] Project Title: [/bold green] " + project_title +
+        "\n[bold green] Project Description:  [/bold green]" + project_desc +
+        "\n[bold green] Installation Instructions: [/bold green]" + install_ins +
+        "\n[bold green] Usage Instructions: [/bold green]" + usage_ins +
+        "\n[bold green] Licence Information: [/bold green]" + lic_type +
+        "\n[bold green] Author Details: [/bold green]" + authdet)
 
     return contents
 
