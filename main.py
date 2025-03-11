@@ -54,7 +54,7 @@ def recallinput(methodinput):
 
 def file_handling():
 ##file handling to produce readme file
-    fnew_input = str(firstq)
+    fnew_input = str(methodinput)
 
 # create text file of input responses without formatting
     fnew = open("README2.md", "w")

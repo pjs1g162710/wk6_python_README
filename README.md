@@ -1,1 +1,1 @@
-{'Project Title: create a project title\nProject Description:  create a project description\nInstallation Instructions: install however you like\nUsage Instructions: use this somehow\nLicence Information: GNU General Public License (GPL v3)Author Details: Pip7\n'}
+{'Project Title: final check\nProject Description:  describe check\nInstallation Instructions: install somehow\nUsage Instructions: for new projects\nLicence Information: GNU Lesser General Public Licence (LGPL v3)Author Details: Pip8\n'}

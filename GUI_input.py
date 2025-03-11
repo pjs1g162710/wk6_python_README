@@ -132,6 +132,6 @@ def gui_window():
 
     return contents
 
-gui_window()   
+
 
 
