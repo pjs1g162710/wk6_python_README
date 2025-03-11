@@ -52,38 +52,36 @@ def terminal_enquiry():
     global lic_type
     lic_type = result["licence"]
 
-    global contents
-    contents = ("Project Title: " + project_title +
-    "Project Description:  " + project_desc +
-    "Installation Instructions: " + install_ins +
-    "Usage Instructions: " + usage_ins +
-    "Licence Information: " + lic_type +
-    "Author Details: " + authdet)
-    
-        ##file handling to produce readme file
-            # create text file of input responses without formatting
-    global filenew
-    filenew = open("README.txt", "w")
-    filenew.write(str(contents))
-    filenew.close()
-
     #here there should be some code to provide feedback to the user
     console.print("The following details were provided:", style=style, justify="left", overflow = "fold")
     console.rule("[bold red]")
 
-    console.print(
-        "[bold blue]User entered: [/bold blue]\n " +
-        "[bold green] Project Title: [/bold green] " + project_title +
-        "\n[bold green] Project Description:  [/bold green]" + project_desc +
-        "\n[bold green] Installation Instructions: [/bold green]" + install_ins +
-        "\n[bold green] Usage Instructions: [/bold green]" + usage_ins +
-        "\n[bold green] Licence Information: [/bold green]" + lic_type +
-        "\n[bold green] Author Details: [/bold green]" + authdet)
+    console.print("[bold blue]User entered: [/bold blue]\n" +
+    "[bold green] Project Title: [/bold green] " + project_title +
+    "\n[bold green] Project Description:  [/bold green]" + project_desc +
+    "\n[bold green] Installation Instructions: [/bold green]" + install_ins +
+    "\n[bold green] Usage Instructions: [/bold green]" + usage_ins +
+    "\n[bold green] Licence Information: [/bold green]" + lic_type +
+    "\n[bold green] Author Details: [/bold green]" + authdet)
 
     console.print("Details are complete", style=style, justify="left", overflow = "fold")
     console.rule("[bold red]")    
+  
+    s = f"""
+    # **Project Title:**  {project_title}
+    *** 
+    ## **Project Description:**  {project_desc}
+    ## **Installation Instructions:** {install_ins}
+    ## **Usage Instructions:** {usage_ins}
+    ## **Licence Information:** {lic_type}
+    ## **Author Details:** {authdet}
+    """
+    global filenew
+    filenew = open("README.md", "w")
+    filenew.write(str(s))
+    filenew.close()
 
-    return contents
+    return result
 
 terminal_enquiry()
    
