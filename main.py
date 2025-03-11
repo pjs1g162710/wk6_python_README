@@ -12,9 +12,6 @@ from rich.text import Text
 import tkinter
 from tkinter import ttk, messagebox
 
-
-
-
 #First use inquirerpy to ask the user whether they want to use GUI or terminal inputs
 def initialq():
     questions = [
@@ -29,9 +26,11 @@ def initialq():
     global methodinput
     methodinput =result["input"]
     
-    
-    #global firstq
-    #firstq = result["input"]
+    console = Console()
+    console.print(
+            "[bold blue]User entered :[/bold blue]\n " +
+            "[bold green]Input Choice: [/bold green] " + methodinput)
+     
     return methodinput
 
  # when we know what choice is made, call one or other function
