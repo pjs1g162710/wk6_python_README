@@ -1,28 +1,33 @@
 
-    
+        
 ## **Project Title:**
-    
-# two lost souls swimming in a fish bowl
-    
+        
+# Construct a README file for Github
+
+        
 *** 
-    
+        
 ## **Project Description:**
-    
- year after year running over the same old ground
-    
+        
+ An alternative input system for creating readme files
+
+        
 ## **Installation Instructions:**
-    
- what have we found
-    
+        
+ This project uses Tkinter as an alternative input to Pyinquirer
+
+        
 ## **Usage Instructions:** 
-    
- the same old feats
-    
+        
+ Exactly the same as before
+
+        
 ## **Licence Information:** 
-    
- Apache License 2.0
-    
+        
+ Creative Commons Licence (CC0, CC, BY etc)
+        
 ## **Author Details:**
-    
- Pip
-    
+         
+ pip@pip.com
+
+        

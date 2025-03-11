@@ -39,6 +39,7 @@ def recallinput(methodinput):
     if methodinput == "GUI":
         import GUI_input
         GUI_input.gui_window()
+    
                 
     elif methodinput == "Terminal":
         import terminal_input
