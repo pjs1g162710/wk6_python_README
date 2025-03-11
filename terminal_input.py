@@ -2,12 +2,18 @@
 #remember to pip install InquirerPy
 from InquirerPy import prompt
 from InquirerPy.utils import color_print
-
+from rich.console import Console, OverflowMethod
+from rich.markdown import Markdown
 
 def terminal_enquiry():
 
+    console = Console(width=60)
+    style = "bold red on blue"
+    console.print("Please answer the following questions:", style=style, justify="left", overflow = "fold")
+    console.rule("[bold red]")
+
     questions = [
-    {"type": "input", "message": "[bold red]Project Title:[\bold red]", "name": "title"},
+    {"type": "input", "message": "Project Title:", "name": "title"},
     {"type": "input", "message": "Project Description:", "name": "desc"},
     {"type": "input", "message": "Installation Instructions:", "name": "install"},
     {"type": "input", "message": "Usage Instructions:", "name": "usage"},
@@ -57,11 +63,15 @@ def terminal_enquiry():
         ##file handling to produce readme file
             # create text file of input responses without formatting
     global filenew
-    filenew = open("README.md", "w")
+    filenew = open("README.txt", "w")
     filenew.write(str(contents))
     filenew.close()
 
-    color_print(contents)
+    #here there should be some code to provide feedback to the user
+    console.print("The following details were provided:", style=style, justify="left", overflow = "fold")
+    console.rule("[bold red]")
+
+    print(contents)
 
     return contents
 
