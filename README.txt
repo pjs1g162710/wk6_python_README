@@ -1,1 +1,1 @@
-Project Title: titleProject Description:  descInstallation Instructions: installUsage Instructions: useLicence Information: Apache License 2.0Author Details: pip
+Project Title: titleProject Description:  descInstallation Instructions: installUsage Instructions: useLicence Information: Apache License 2.0Author Details: Pip

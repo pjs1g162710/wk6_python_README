@@ -9,8 +9,8 @@ def terminal_enquiry():
 
     console = Console(width=60)
     style = "bold red on blue"
-    console.print("Please answer the following questions:", style=style, justify="left", overflow = "fold")
-    console.rule("[bold red]")
+    console.print("Please answer the following questions: ", style=style, justify="left", overflow = "fold")
+    console.print("[bold red]Please input N/A if no answer given")
 
     questions = [
     {"type": "input", "message": "Project Title:", "name": "title"},
@@ -79,6 +79,9 @@ def terminal_enquiry():
         "\n[bold green] Usage Instructions: [/bold green]" + usage_ins +
         "\n[bold green] Licence Information: [/bold green]" + lic_type +
         "\n[bold green] Author Details: [/bold green]" + authdet)
+
+    console.print("Details are complete", style=style, justify="left", overflow = "fold")
+    console.rule("[bold red]")    
 
     return contents
 
